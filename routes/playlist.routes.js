@@ -47,7 +47,6 @@ router.post(
 
      Playlist.create({ name, theme, description, imageUrl, url: removedDupsUrl, owner: _id })
      .then(dbPost => {
-       console.log(dbPost)
          res.redirect("/my-playlists");
        })
        .catch(err => console.log(`Err while adding playlist to the DB: ${err}`));
@@ -66,9 +65,7 @@ router.get('/my-playlists', (req, res,) => {
       if (playlist.owner.equals(req.user)) {
         currentUserPlaylist.push(playlist)
       }
-    })
-    console.log(currentUserPlaylist)
-   
+    })   
     res.status(200).render("playlists/my-playlists", { playlist: currentUserPlaylist, user: req.user });
   })
   .catch(err => console.log(`Err while getting the playlists from the DB: ${err}`));
@@ -80,7 +77,6 @@ router.get("/my-playlists/:playlistId", (req, res, next) => {
 
   Playlist.findById(playlistId)
     .then((playlistResult) => {
-      console.log(playlistResult)
       res.status(200).render("playlists/details", { playlistResult, playlistId, user: req.user });
     })
     .catch(err => console.log(`Err while getting the playlists from the DB: ${err}`));
@@ -106,7 +102,6 @@ router.get("/my-playlists/:playlistId/edit", (req, res, next) => {
           videoData.push({id: videoIdValue, platform: 'YouTube'})
         }
       }
-      console.log(videoData);
       res.status(200).render("playlists/edit-playlist", { playlistResult, videoData, user: req.user });
     })
     .catch((findErr) => next(findErr));
@@ -119,7 +114,6 @@ router.post(
     const { playlistId } = req.params;
     const { name, theme, description, videoId, platform } = req.body;
     
-    console.log(req.body);
      let url = [];
      let imageUrl = "https://via.placeholder.com/150";
 
@@ -148,8 +142,6 @@ router.post(
        }
     
        const removedDupsUrl = [...new Set(url)]
-
-       console.log(removedDupsUrl)
 
     Playlist.findByIdAndUpdate(playlistId, { name, theme, description, imageUrl, url: removedDupsUrl })
       .then((updatedPlaylist) => {
