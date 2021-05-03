@@ -1,0 +1,41 @@
+<section id='my-playlist-section'>
+  
+  <div id='create'>
+
+    <div>
+      <h1>My Playlists </h1>
+
+    </div>
+ 
+ <Div class='create-link'>
+    <a  href="/create-playlist">Create New Playlist</a>
+    </div> 
+</div>
+
+<article id='playlistCards'>
+
+  {{#each playlist}}
+
+
+<div class="card" style="width: 18rem;">
+  
+  <img class="card-img-top" src="{{this.imageUrl}}" alt="Card image cap" width='100' heigth='180'>
+ 
+  <div class="card-body">
+    
+    <h5 class="card-title">{{this.name}}</h5>
+    
+    <p class="card-text">{{this.description}}</p>
+    
+    <a href="/my-playlists/{{id}}" class="btn btn-warning">See full playlist</a>
+    <a href="/my-playlists/{{id}}/edit" class="btn btn-outline-warning">Edit</a>
+  
+  </div>
+  </div>
+</div>
+
+  {{/each}}
+</article>
+
+
+</section>

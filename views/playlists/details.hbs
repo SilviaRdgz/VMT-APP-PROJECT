@@ -1,0 +1,34 @@
+<section id='details-section'>
+
+<div id='details-intro'>
+  <h1>Now rolling : {{playlistResult.name}}</h1>
+    <h3>Theme :</h3>
+    <p>{{playlistResult.theme}}</p>
+    <h3>Description :</h3>
+    <p>{{playlistResult.description}}</p>
+</div>
+
+<div id='playlist-videos'>
+
+   {{#each playlistResult.url}}
+
+<div id='video-container'>
+  <br>
+<iframe class="responsive-iframe" src="{{this}}" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+<br>
+</div>
+ {{/each}}
+
+</div>
+
+<div id='links-container'>
+  <div class='go-back-link'>
+  <a href="/my-playlists/">Go back</a>
+  </div>
+
+  <div class="edit-link">
+  <a href='/my-playlists/{{playlistId}}/edit'>Edit</a>
+  </div>
+</div>
+
+</section>

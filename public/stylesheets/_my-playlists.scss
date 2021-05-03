@@ -1,0 +1,76 @@
+#my-playlist-section{
+
+    h1{
+      font-family: $navFont;
+    }
+  }
+  
+  #create{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+  
+  }
+  
+  
+  #playlistCards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: space-around;
+  
+  
+  }
+  
+  .card-img-top{
+    box-shadow: 5px 10px #808080;
+  
+  }
+  .card-body{
+    background-color: #E5E4E2;
+    box-shadow: 5px 10px #808080;
+  
+  }
+  .card-title{
+    font-family: $markerFont;
+    font-size: 2rem;
+    color: #ffc107;
+    text-shadow: 2px 2px #808080;
+  
+  }
+  
+  
+  .btn-warning {
+    color: #fbfbfd;
+    background-color: #ffc107;
+    border-color: #ffc107;
+    margin-top: 4%;
+  }
+  
+  #controls{
+    button{
+      background-color: white;
+      color: $goldenYellow;
+      border: 1px solid $goldenYellow;
+      border-radius: 0.25rem;
+      margin-top: 2%;
+      padding: 1%;
+    }
+    
+  }
+  
+  .create-link{
+    font-size: 1.5rem;
+    border: solid 1px black;
+    border-radius: 0.25rem;
+    padding: 10px;
+    margin-right: 5%;
+  
+      a{
+        text-decoration: none;
+        color: black;
+      }
+      a:hover{ 
+        @include hover-effect();
+    }
+  }

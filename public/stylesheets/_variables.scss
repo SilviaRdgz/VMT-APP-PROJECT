@@ -1,0 +1,29 @@
+$textColor: #FFFFF0;
+$goldenYellow: #FFC000;
+$offWhite: #FAF9F6;
+	
+$markerFont: 'Permanent Marker';
+$navFont: 'Chakra Petch';
+$charcoalColor: '#36454F';
+
+@mixin hover-effect()
+{
+  color: $goldenYellow !important;
+}
+
+@mixin general-background(){
+  background-image: url(https://twopots-design.com/wp-content/uploads/2020/07/DesignXavierEsclusaTriasVHSPortada.jpg);
+  background-position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  margin:0px;
+
+}
+
+@mixin flexCenter (){
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  
+}

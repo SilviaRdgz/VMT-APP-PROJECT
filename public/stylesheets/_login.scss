@@ -1,0 +1,57 @@
+#login-container{
+    @include general-background(); 
+  }
+  
+  .col-md-4{
+    height: 25%;
+  }
+  
+  #form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $offWhite;
+    font-family: $navFont;
+    width: 50%;
+    height: 60%;   
+    border-radius: 10px;
+    box-shadow: 5px 10px;
+    margin-left:25%;
+  
+    h2{
+      font-weight: bolder;
+      margin-left: 10%;
+      padding-top: 5%;
+    }
+  }
+  
+  .align-self-center{
+    a:hover{ 
+      color: $goldenYellow !important;
+    }
+  }
+  
+  .google{
+    font-size: 1rem;
+    color: black;
+    padding: 10px;
+  }
+  
+  .btn-warning{
+    align-content: center;
+    margin: 10% 0% 3% 0%
+    
+  }
+  .account-message{
+    font-size: 1rem;
+    padding: 10px;
+  }
+  
+  #error-message{
+    margin-left: 10%;
+    margin-top: 5%;
+    color: red;
+    p{
+      color: red;
+    }
+  }

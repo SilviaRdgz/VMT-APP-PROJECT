@@ -9,10 +9,10 @@ module.exports = (app) => {
       resave: true,
       saveUninitialized: false,
       cookie: {
-        maxAge: 60000,
+        maxAge: 900000,
       },
       store: MongoStore.create({
-        mongoUrl: process.env.MONGO_URI,
+        mongoUrl: process.env.MONGO_URI_ATLAS || process.env.MONGO_URI,
       }),
     })
   );

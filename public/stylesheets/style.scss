@@ -1,8 +1,34 @@
+
+@import './variables';
+@import './index';
+@import './login';
+@import './profile';
+@import './my-playlists';
+@import './create';
+@import './details';
+
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  padding: 0;
+  margin: 0;
 }
 
+p {
+  font-family: $navFont;
+}
 a {
+  font-family: $navFont;
   color: #00B7FF;
 }
+
+.container-fluid{
+  a:hover{ 
+    @include hover-effect();
+  }
+}
+
+#signup-container{
+  @include general-background();
+}
+
+

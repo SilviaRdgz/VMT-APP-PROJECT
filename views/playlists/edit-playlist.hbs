@@ -1,0 +1,77 @@
+<section>
+  
+
+
+<form class="row g-3" action="/my-playlists/{{playlistResult.id}}/edit" method="POST" id="form-container" enctype="multipart/form-data">
+  
+    <h2>Edit Playlist</h2>
+
+  <div class="col-md-6">
+    <label for="name" class="form-label">Playlist Name</label>
+    <input type="text" type="name" class="form-control" id="playlistName" name="name" value="{{playlistResult.name}}">
+  </div>
+
+<div class="col-md-6">
+    <label for="theme" class="form-label">Theme</label>
+    <input type="text" type="name" class="form-control" id="playlistTheme" name="theme" value='{{playlistResult.theme}}'>
+  </div>
+  
+  <div class="col-12">
+    <label for="description" class="form-label">Description</label>
+    <textarea type="text" class="form-control"  name="description" value="{{playlistResult.description}}">{{playlistResult.description}}</textarea>
+  </div>
+  </div>
+  
+
+<div class="input-group mb-3">
+  <input type="file" class="form-control" id="inputGroupFile02" name='imageUrl' src="{{playlistResult.imageUrl}}" >
+  <label class="input-group-text" for="imageUrl">Upload Playlist Cover</label>
+</div>
+
+<div id="add-video-wrapper">
+
+  <div id='video-details'>
+    {{#each videoData}}
+      <div class="col-md-6">
+      <label class="input-group-url" for="url">Copy Video ID</label>    
+      <input type="text" class="form-control" placeholder="https://example.com"
+        size="30" name="videoId"  value="{{this.id}}" required>  
+        </div>
+
+      <div class="col-md-6">
+      <label class="input-group-url" for="platform">From which platform:</label>    
+      <select class="btn btn-outline-primary btn-sm" name="platform" required>
+      <option value="{{this.platform}}"selected>{{this.platform}}</option>
+      <option value="YouTube">YouTube</option>
+      <option value="Vimeo">Vimeo</option>
+      </select>
+      </div>
+    {{/each}}
+    </div>
+
+    <div id='controls'>
+      <button  type='button' id='add-more-videos'>Add video</button>
+      <button  type='button' id='remove-videos'>Remove Video</button>
+    </div>
+</div>
+
+
+
+{{#if errorMessage}}
+  <div class="error-message">{{errorMessage}}</div>
+  {{/if}}
+
+<div class="col-12">
+    <button type="submit" class="btn btn-warning">Update Playlist</button>
+  </div>
+
+</form>
+
+<div class='go-back-link'>
+<a href="/my-playlists/">go back</a>
+</div>
+
+</section>
+
+
+ 

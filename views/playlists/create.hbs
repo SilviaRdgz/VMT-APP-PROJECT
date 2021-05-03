@@ -1,0 +1,75 @@
+<section>
+
+
+<form class="row g-3" action="/create-playlist" method="POST" id="form-container" enctype="multipart/form-data">
+
+<h2>Create Playlist</h2>
+
+  <div class="col-md-6">
+    <label for="name" class="form-label">Playlist Name</label>
+    <input type="text" type="name" class="form-control" id="playlistName" name="name" required>
+  </div>
+ 
+ <div class="col-md-6">
+    <label for="theme" class="form-label">Theme</label>
+    <input type="text" type="name" class="form-control" id="playlistTheme" name="theme" required>
+  </div>
+  
+  <div class="col-12">
+    <label for="description" class="form-label">Description</label>
+    <textarea type="text" class="form-control"  name="description"></textarea>
+  </div>
+  </div>
+
+
+
+<div class="input-group mb-3">
+  <input type="file" class="form-control" id="inputGroupFile02" name='imageUrl'>
+  <label class="input-group-text" for="imageUrl">Upload Playlist Cover</label>
+</div>
+
+<div id="add-video-wrapper">
+
+  <div id='video-details'>
+      <div class="col-md-6">
+      <label class="input-group-url" for="url">Copy Video ID</label>    
+      <input type="text" class="form-control" placeholder="https://example.com"
+        size="30" name="videoId"  required> 
+      <small id="emailHelp" class="form-text text-muted">Find the video on YouTube and Vimeo, click on the 'share' option and ONLY copy and paste the ID section of the link.</small>
+
+         </div>
+
+      <div class="col-md-6">
+      <label class="input-group-url" for="platform">From which platform:</label>    
+      <select class="form-control" name="platform" required>
+      <option disabled selected >Choose platform</option>
+      <option value="youtube">YouTube</option>
+      <option value="vimeo">Vimeo</option>
+      </select>
+      </div>
+  </div>
+
+<div id='controls'>
+      <button type='button' id='add-more-videos'>Add video</button>
+      <button type='button' id='remove-videos'>Remove Video</button>
+    </div>
+
+</div>
+
+{{#if errorMessage}}
+  <div class="error-message">{{errorMessage}}</div>
+  {{/if}}
+
+<div class="col-12">
+    <button type="submit" class="btn btn-warning">Create Playlist</button>
+  </div>
+
+</form>
+
+<div class='go-back-link'>
+<a href="/my-playlists/">Go back</a>
+</div>
+
+
+</section>
+

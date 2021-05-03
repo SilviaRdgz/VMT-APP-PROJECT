@@ -1,0 +1,35 @@
+#landing-page{
+    @include general-background();
+  }
+      
+  .title-container{
+        @include flexCenter();
+        
+        h1{
+          color: black;
+          background-color: $offWhite;
+          font-size: 6rem;
+          font-family: $markerFont;
+          text-align: center;
+          width: 50%;
+          height: 50%; 
+          margin-top: 15%;
+          padding:15px;
+          border: 1px solid;
+          box-shadow: 5px 10px;
+          border-radius: 10px;
+        }
+      }
+  
+  
+  .nav-link {
+    color: $textColor;
+    font-family: $navFont;
+  }
+  
+  .navbar-brand{
+    color: $textColor;
+    font-family: $markerFont;
+  
+  }
+  
