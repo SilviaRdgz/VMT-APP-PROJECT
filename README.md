@@ -9,3 +9,6 @@ Fullstack App project for Ironhack's Web Development course.
 * Javascript
 * Express
 * Mongoose
+
+### LINK TO DEPLYED APP:
+https://video-mix-tape-app.herokuapp.com/
