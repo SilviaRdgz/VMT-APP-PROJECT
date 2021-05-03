@@ -1,7 +1,8 @@
-# Video-Mixtape-App
+# Video-Mixtape-App [VMTA]
 Fullstack App project for Ironhack's Web Development course.
 
 ## Technologies used:
+
 
 * HTML
 * CSS / SCSS
@@ -9,3 +10,6 @@ Fullstack App project for Ironhack's Web Development course.
 * Javascript
 * Express
 * Mongoose
+
+### LINK TO APP:
+https://video-mix-tape-app.herokuapp.com/

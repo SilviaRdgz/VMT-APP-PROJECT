@@ -66,6 +66,7 @@ router.get('/my-playlists', (req, res,) => {
         currentUserPlaylist.push(playlist)
       }
     })   
+   
     res.status(200).render("playlists/my-playlists", { playlist: currentUserPlaylist, user: req.user });
   })
   .catch(err => console.log(`Err while getting the playlists from the DB: ${err}`));
